@@ -1,5 +1,9 @@
 {
   "rewrites": [
+    { "source": "/assessment", "destination": "/assessment.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/telehealth-agreement", "destination": "/telehealth-agreement.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
