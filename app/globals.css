@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand colours - softened palette */
+  --color-background: #FEFCFB;
+  --color-foreground: #1C1C1C;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #FEF8F6;
+  --color-border: #F0E4E0;
+  --color-border-strong: #E0CCC4;
+  --color-muted: #7A7A7A;
+  --color-muted-foreground: #5A5A5A;
+
+  /* Blush - softened from original */
+  --color-primary: #E4B0BA;
+  --color-primary-hover: #D89AA6;
+  --color-primary-light: #FDF0F2;
+  --color-primary-mid: #D09AAE;
+  --color-primary-foreground: #FFFFFF;
+
+  /* Blush pale backgrounds */
+  --color-blush-pale: #FEF8F9;
+  --color-blush-light: #FDF2F4;
+
+  /* Gold accent */
+  --color-accent: #C9A84C;
+  --color-accent-hover: #A8873A;
+  --color-accent-light: #FAF3DC;
+  --color-accent-dark: #A8873A;
+  --color-accent-richer: #B8962A;
+  --color-accent-foreground: #FFFFFF;
+
+  /* Dark section */
+  --color-dark: #1C1C1C;
+  --color-dark-warm: #221E1F;
+
+  /* Status colours */
+  --color-success: #4BA878;
+  --color-success-light: #E8F5E9;
+  --color-warning: #FF9800;
+  --color-warning-light: #FFF3E0;
+  --color-error: #E53935;
+  --color-error-light: #FFEBEE;
+  --color-info: #2196F3;
+  --color-info-light: #E3F2FD;
+
+  /* Fonts */
+  --font-heading: var(--font-playfair);
+  --font-sans: var(--font-inter);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 26px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-background); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-muted); }
+
+/* Marquee animation */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Fade-in-up animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+  opacity: 0;
+}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
